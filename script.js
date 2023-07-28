@@ -1,3 +1,7 @@
+
+
+
+
 // Function to update the clock, date, and day of the week display
 function updateClockDateAndDay() {
     const now = new Date();
@@ -60,4 +64,26 @@ function performGoogleSearch() {
 document.getElementById("searchForm").addEventListener("submit", function (event) {
     event.preventDefault();
     performGoogleSearch();
+});
+
+
+
+// Function to populate textarea with the value from local storage
+function populateTextareaFromLocalStorage() {
+    const textarea = document.getElementById('tempnotesarea');
+    const tempNote = localStorage.getItem('tempnote');
+    if (tempNote) {
+        textarea.value = tempNote;
+    }
+}
+
+// Call the function to populate the textarea on script start
+populateTextareaFromLocalStorage();
+
+
+
+
+// Add event listener to save textarea content to local storage on change
+document.getElementById('tempnotesarea').addEventListener('change', (e) => {
+    localStorage.setItem('tempnote', e.target.value);
 });
