@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Dashboard</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body {
+
+            background-image: url("./back.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+
+        }
+
+
+        #maincard {
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            border: 1px solid gray;
+        }
+
+        #notescard {
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            border: 1px solid gray;
+        }
+
+        #clock {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        #date {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        #day {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        #links a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding-right: 1rem;
+        }
+
+        input {
+            background: none !important;
+            color: white !important;
+        }
+
+        #temnotesarea {
+            background-color: rgba(0, 0, 0, 0) !important;
+            color: white;
+            border: 1px solid gray !important;
+
+        }
+
+
+        #temnotesarea::placeholder {
+            color: #999 !important;
+            /* Replace with your desired color code */
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="maincontainer" class="container">
+        <div id="maincard" class="mt-5 p-5">
+
+            <div class="mb-3" id="clock"></div>
+            <div id="day"></div>
+
+            <div id="date"></div>
+            <div id="iranianDate"></div>
+
+
+
+            <hr>
+
+            <form id="searchForm" action="#">
+                <div class="input-group mb-3">
+                    <input id="searchInput" type="text" class="form-control" placeholder=""
+                        aria-label="Recipient's username" autocomplete="off">
+                    <button type="submit" class="btn btn-outline-light" id="button-addon2">Google search</button>
+                </div>
+
+            </form>
+
+            <hr>
+
+            <div id="links">
+
+                <a target="_blank" href="https://feedly.com/i/my">
+                    <h3> <i class="bi bi-rss-fill"></i> Feedly
+                    </h3>
+                </a>
+
+                <a target="_blank" href="https://www.pinterest.com/">
+                    <h3> <i class="bi bi-pinterest"></i> Pinterest
+                    </h3>
+                </a>
+
+
+                <a target="_blank" href="https://www.youtube.com/">
+                    <h3> <i class="bi bi-youtube"></i> YouTube
+                    </h3>
+                </a>
+
+
+
+                <a target="_blank" href="https://www.reddit.com/">
+                    <h3> <i class="bi bi-reddit"></i> Reddit
+                    </h3>
+                </a>
+
+
+                <a target="_blank" href="https://twitter.com/home">
+                    <h3> <i class="bi bi-twitter"></i> Twitter
+                    </h3>
+                </a>
+
+
+
+
+                <a target="_blank" href="https://www.linkedin.com/feed/">
+                    <h3> <i class="bi bi-linkedin"></i> LinkedIn
+                    </h3>
+                </a>
+
+
+                <a target="_blank" href="https://translate.google.com/">
+                    <h3> <i class="bi bi-translate"></i> Google Translate
+                    </h3>
+                </a>
+
+            </div>
+
+
+
+
+
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+
+            </div>
+            <div class="col">
+
+
+                <div class="p-2" id="notescard">
+                    <textarea placeholder="Notes" class="form-control" id="temnotesarea" rows="10"></textarea>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="./bootstrap.bundle.min.js"></script>
+
+    <script defer src="./script.js"></script>
+
+
+
+</body>
+
+</html>

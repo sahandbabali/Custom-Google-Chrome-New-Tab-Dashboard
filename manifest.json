@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Custom Dashboard",
+    "version": "1.0",
+    "description": "Replace new tab with a custom dashboard",
+    "chrome_url_overrides": {
+        "newtab": "dashboard.html"
+    },
+    "permissions": [
+        "storage"
+    ]
+}
